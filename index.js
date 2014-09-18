@@ -60,7 +60,7 @@ var JUnitReporter = function(baseReporterDecorator, config, logger, helper, form
     suite.att('time', (result.netTime || 0) / 1000);
 
     suite.ele('system-out').dat(allMessages.join() + '\n');
-    suite.ele('system-err');
+    // suite.ele('system-err'); // bamboo doesn't like this
   };
 
   this.onRunComplete = function() {
